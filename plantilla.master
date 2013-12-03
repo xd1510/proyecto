@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="plantilla.master.cs" Inherits="plantilla" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="styles/css.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         
+            <div class="PanelArriba">
+                <div class="logo"></div>
+                <div class="PanelRecursos">
+                    <asp:Label ID="lblmetal" runat="server" Text="Label" meta:resourcekey="lblmetal"></asp:Label>
+                </div>
+                <div class="Paneluser">
+                    <asp:HyperLink ID="HyperLink1" runat="server"
+                NavigateUrl="~/plantilla.master.aspx?lang=ES">Español</asp:HyperLink> 
+            <asp:HyperLink ID="HyperLink2" runat="server"
+                NavigateUrl="~/plantilla.master.aspx?lang=EN">English</asp:HyperLink>
+
+                </div>
+            </div>
+            
+            <div class="PanelIzquierdo">
+
+            </div>
+            <div class="ContenedorDerecha">
+            <div class="PanelContenido">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+        
+            </div>
+            
+            
+            <div class="PanelDerecho">
+
+            </div>
+            </div>
+
+    </div>
+    </form>
+</body>
+</html>

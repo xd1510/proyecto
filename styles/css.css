@@ -1,0 +1,40 @@
+﻿* {
+
+}
+body {
+        margin:2%;
+    border:1px solid;
+}
+
+.PanelArriba {
+width:100%;
+
+}
+.logo {
+width:20%;
+float:left;
+}
+.PanelRecursos {
+width:50%;
+float:left;
+}
+.Paneluser {
+    width:10%;
+}
+.PanelIzquierdo {
+     width:10%;
+     height:100%;
+     float:left;
+}
+.ContenedorDerecha {
+width:90%;
+}
+.PanelContenido {
+    float:left;
+     width:90%;
+}
+.PanelDerecho {
+     width:10%;
+     height:100%;
+     float:left;
+}
