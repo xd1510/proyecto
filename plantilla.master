@@ -4,47 +4,97 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link href="styles/css.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/css/css.css" rel="stylesheet" />
+    <script src="dist/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-         
-            <div class="PanelArriba">
-                <div class="logo"></div>
-                <div class="PanelRecursos">
-                    <asp:Label ID="lblmetal" runat="server" Text="Label" meta:resourcekey="lblmetal"></asp:Label>
+    <!-- WRAPPER FOR STICKY FOOTER -->
+    <div id="Wrapper">
+        <div id="main">
+            <form id="form1" runat="server">
+                <!-- HEADER -->
+                <div id="header" class="container">
+                    <div class="row">
+                        <!-- LOGO -->
+                        <div id="Logo" class="col-md-2">
+                            logo
+                        </div>
+                        <!-- RECURSOS -->
+                        <div id="PanelRecursos" class="col-md-8">
+                            <div class="row">
+                                <div id="metal" class="col-md-3">
+                                    <asp:Label ID="lblmetal" runat="server" Text="Metal"></asp:Label><br />
+                                    <asp:Label ID="lblmetalrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                </div>
+                                <div id="cristal" class="col-md-3">
+                                    <asp:Label ID="lblcristal" runat="server" Text="Cristal"></asp:Label><br />
+                                    <asp:Label ID="lblcristalrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                </div>
+                                <div id="petroleo" class="col-md-3">
+                                    <asp:Label ID="lblPetroleo" runat="server" Text="Petroleo"></asp:Label><br />
+                                    <asp:Label ID="lblPetroleorec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                </div>
+                                <div id="electricidad" class="col-md-3">
+                                    <asp:Label ID="lblElectricidad" runat="server" Text="Electricidad"></asp:Label><br />
+                                    <asp:Label ID="lblElectricidadrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- USER PANEL -->
+                        <div id="PanelUser" class="col-md-2">
+                            <asp:Label ID="lbluser" runat="server" Text="Usuario"></asp:Label>
+                        </div>
+                    </div>
                 </div>
-                <div class="Paneluser">
-                    <asp:HyperLink ID="HyperLink1" runat="server"
-                NavigateUrl="~/plantilla.master.aspx?lang=ES">Español</asp:HyperLink> 
-            <asp:HyperLink ID="HyperLink2" runat="server"
-                NavigateUrl="~/plantilla.master.aspx?lang=EN">English</asp:HyperLink>
 
+                <!-- BODY -->
+                <div id="body" class="container">
+                    <div class="row">
+                        <!-- LATERAL MENU-->
+                        <div id="MenuIzquierdo" class="col-md-2">
+                            <asp:Button ID="btnGeneral" runat="server" Text="Vision General" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnRecursos" runat="server" Text="Recursos" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnInstalaciones" runat="server" Text="Instalaciones" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnInvestigacion" runat="server" Text="Investigaciones" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnMilitar" runat="server" Text="Militar" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnDefensa" runat="server" Text="Defensa" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnMision" runat="server" Text="Misiones" CssClass="btnmenu btn" /><br />
+                            <hr />
+                            <asp:Button ID="btnMapa" runat="server" Text="Mapa" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnAlianza" runat="server" Text="Alianza" CssClass="btnmenu btn" /><br />
+                            <asp:Button ID="btnClasificacion" runat="server" Text="Clasificación" CssClass="btnmenu btn" /><br />
+                            <div id="ImgBtns" class="btn-group">
+                                <asp:ImageButton ID="btnFriends" runat="server" ImageUrl="~/dist/img/friends_64.png" CssClass="imgbtnmenu btn" />
+                                <asp:ImageButton ID="btnMessages" runat="server" ImageUrl="~/dist/img/message_64.png" CssClass="imgbtnmenu btn" />
+                                <asp:ImageButton ID="btnOptions" runat="server" ImageUrl="~/dist/img/options_64.png" CssClass="imgbtnmenu btn" />
+                            </div>
+                        </div>
+
+                        <!-- CONTENT -->
+                        <div id="PanelContenido" class="col-md-8">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+
+                        <!-- TERRITORI LIST -->
+                        <div id="MenuDerecho" class="col-md-2">
+                            asdf
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="PanelIzquierdo">
-
-            </div>
-            <div class="ContenedorDerecha">
-            <div class="PanelContenido">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-        
-            </div>
-            
-            
-            <div class="PanelDerecho">
-
-            </div>
-            </div>
-
+            </form>
+        </div>
     </div>
-    </form>
+
+    <!-- FOOTER -->
+    <footer id="Footer" class="container">
+        footer
+    </footer>
+
 </body>
 </html>
