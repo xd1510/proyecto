@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
     <link href="dist/css/css.css" rel="stylesheet" />
     <script src="dist/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -54,36 +54,45 @@
 
                 <!-- BODY -->
                 <div id="body" class="container">
-                    <div class="row">
+                    <div id="RowBody" class="row">
                         <!-- LATERAL MENU-->
-                        <div id="MenuIzquierdo" class="col-md-2">
-                            <asp:Button ID="btnGeneral" runat="server" Text="Vision General" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnRecursos" runat="server" Text="Recursos" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnInstalaciones" runat="server" Text="Instalaciones" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnInvestigacion" runat="server" Text="Investigaciones" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnMilitar" runat="server" Text="Militar" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnDefensa" runat="server" Text="Defensa" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnMision" runat="server" Text="Misiones" CssClass="btnmenu btn" /><br />
-                            <hr />
-                            <asp:Button ID="btnMapa" runat="server" Text="Mapa" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnAlianza" runat="server" Text="Alianza" CssClass="btnmenu btn" /><br />
-                            <asp:Button ID="btnClasificacion" runat="server" Text="Clasificación" CssClass="btnmenu btn" /><br />
-                            <div id="ImgBtns" class="btn-group">
-                                <asp:ImageButton ID="btnFriends" runat="server" ImageUrl="~/dist/img/friends_64.png" CssClass="imgbtnmenu btn" />
-                                <asp:ImageButton ID="btnMessages" runat="server" ImageUrl="~/dist/img/message_64.png" CssClass="imgbtnmenu btn" />
-                                <asp:ImageButton ID="btnOptions" runat="server" ImageUrl="~/dist/img/options_64.png" CssClass="imgbtnmenu btn" />
+                        <div id="MenuIzquierdo" class="col-md-2 ">
+                            <div id="Buttons">
+                                <asp:Button ID="btnGeneral" runat="server" Text="Vision General" CssClass="btnmenu-first btn" /><br />
+                                <asp:Button ID="btnRecursos" runat="server" Text="Recursos" CssClass="btnmenu btn" /><br />
+                                <asp:Button ID="btnInstalaciones" runat="server" Text="Instalaciones" CssClass="btnmenu btn" /><br />
+                                <asp:Button ID="btnInvestigacion" runat="server" Text="Investigaciones" CssClass="btnmenu btn" /><br />
+                                <asp:Button ID="btnMilitar" runat="server" Text="Militar" CssClass="btnmenu btn" /><br />
+                                <asp:Button ID="btnDefensa" runat="server" Text="Defensa" CssClass="btnmenu btn" /><br />
+                                <asp:Button ID="btnMision" runat="server" Text="Misiones" CssClass="btnmenu btn" /><br />
+                                <hr />
+                                <asp:Button ID="btnMapa" runat="server" Text="Mapa" CssClass="btnmenu btn" /><br />
+                                <asp:Button ID="btnAlianza" runat="server" Text="Alianza" CssClass="btnmenu btn" /><br />
+                                <asp:Button ID="btnClasificacion" runat="server" Text="Clasificación" CssClass="btnmenu btn" /><br />
+
+                                <div id="ImgBtns">
+                                    <hr />
+                                    <asp:ImageButton ID="btnFriends" runat="server" ImageUrl="~/dist/img/friends_64_white.png" CssClass="imgbtnmenu btn" />
+                                    <asp:ImageButton ID="btnMessages" runat="server" ImageUrl="~/dist/img/message_64_white.png" CssClass="imgbtnmenu btn" />
+                                    <asp:ImageButton ID="btnOptions" runat="server" ImageUrl="~/dist/img/options_64_white.png" CssClass="imgbtnmenu btn" />
+
+                                </div>
                             </div>
                         </div>
 
                         <!-- CONTENT -->
                         <div id="PanelContenido" class="col-md-8">
-                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                            </asp:ContentPlaceHolder>
+                            <div class="ContenidoCentral">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
                         </div>
 
                         <!-- TERRITORI LIST -->
-                        <div id="MenuDerecho" class="col-md-2">
-                            asdf
+                        <div id="MenuDerecho" class="col-md-2 ">
+                            Territorios
+                            <div id="ListTerritorios">
+                            </div>
                         </div>
                     </div>
                 </div>

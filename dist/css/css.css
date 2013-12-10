@@ -1,21 +1,46 @@
 ﻿* {
     margin: 0;
+    color: #fff;
+    font-family: Verdana;
 }
 
 div, footer {
-    border: 1px solid black;
+    /*border: 1px solid white;*/
 }
+
 
 #PanelRecursos, #PanelUser, #MenuDerecho, #Logo {
     text-align:center;
     height:100%;
+    font-weight: bold;
 }
 
-.btnmenu {
+.btnmenu, .btnmenu-last, .btnmenu-first {
     width: 100%;
     margin-top: 2%;
     margin-bottom: 2%;
+    border: 1px solid #20282f;
+    background-color:#20282f;
+    border-radius:0;
+    font-weight: bold;
+    /*text-shadow: black -1px -1px;*/
 }
+
+    .btnmenu:hover {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        color: #00e7f1;
+    }
+
+    /*.btnmenu-last:hover {
+        border-top: 1px solid white;
+        color: #00e7f1;
+    }*/
+
+    .btnmenu-first:hover {
+        border-bottom: 1px solid white;
+        color: #00e7f1;
+    }
 
 .imgbtnmenu {
     float:left;
@@ -24,10 +49,30 @@ div, footer {
     border-radius:4px;
 }
 
+#ImgBtns {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
 #MenuIzquierdo {
     text-align:center;
-    padding-top: 4%;
+    padding-top: 1%;
     padding-bottom: 1%;
+}
+
+.ContenidoCentral {
+    width: 98%;
+    margin: 0 auto;
+}
+
+#RowBody {
+    padding-top:15px;
+}
+
+#Buttons {
+    background-color: #20282f;
+    border-radius: 5px;
 }
 
 /* Sticky Footer*/
@@ -38,8 +83,10 @@ div, footer {
 
 html, body {
     height: 100%; 
+    background-image:url(/proyecto/dist/img/wallpaper_game.jpg);
+    background-repeat:no-repeat;
 }
-
+/*20282f*/
 #Wrapper { 
     min-height: 100%;
 } 
@@ -48,10 +95,8 @@ html, body {
     overflow: auto; 
     padding-bottom: 25px; 
     text-align: center;
-    margin-left:2%;
     margin-bottom:0px;
-    padding-top: 2%;
-    margin-right:2%;
+    padding-top: 1%;
     border:1px solid;
     height: 100%;
 }
@@ -62,7 +107,7 @@ html, body {
     height: 25px; /* Altura del Footer en px*/ 
     width:100%;
     clear: both; 
-    background: #286af0; 
+    background: #20282f; 
     text-align: center; 
     color: #FFFFFF; 
 }
@@ -73,4 +118,8 @@ body:before {
     float: left; 
     width: 0; 
     margin-top: -32767px;/* Efecto Negativo para OPERA*/ 
+}
+
+#MenuDerecho {
+    float: right;
 }
