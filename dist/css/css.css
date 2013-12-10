@@ -1,0 +1,76 @@
+﻿* {
+    margin: 0;
+}
+
+div, footer {
+    border: 1px solid black;
+}
+
+#PanelRecursos, #PanelUser, #MenuDerecho, #Logo {
+    text-align:center;
+    height:100%;
+}
+
+.btnmenu {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.imgbtnmenu {
+    float:left;
+    height: 34px;
+    width: auto;
+    border-radius:4px;
+}
+
+#MenuIzquierdo {
+    text-align:center;
+    padding-top: 4%;
+    padding-bottom: 1%;
+}
+
+/* Sticky Footer*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; 
+}
+
+#Wrapper { 
+    min-height: 100%;
+} 
+
+#main { 
+    overflow: auto; 
+    padding-bottom: 25px; 
+    text-align: center;
+    margin-left:2%;
+    margin-bottom:0px;
+    padding-top: 2%;
+    margin-right:2%;
+    border:1px solid;
+    height: 100%;
+}
+
+#Footer { 
+    position: relative; 
+    margin-top: -25px; /* altura en px del footer con valor negativo */ 
+    height: 25px; /* Altura del Footer en px*/ 
+    width:100%;
+    clear: both; 
+    background: #286af0; 
+    text-align: center; 
+    color: #FFFFFF; 
+}
+   /*Opera Fix*/ 
+body:before { 
+    content: ""; 
+    height: 100%; 
+    float: left; 
+    width: 0; 
+    margin-top: -32767px;/* Efecto Negativo para OPERA*/ 
+}
