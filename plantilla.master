@@ -8,6 +8,7 @@
     <title></title>
     <link href="dist/css/bootstrap.css" rel="stylesheet" />
     <link href="dist/css/css.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -18,36 +19,38 @@
         <div id="main">
             <form id="form1" runat="server">
                 <!-- HEADER -->
-                <div id="header" class="container">
-                    <div class="row">
-                        <!-- LOGO -->
-                        <div id="Logo" class="col-md-2">
-                            logo
-                        </div>
-                        <!-- RECURSOS -->
-                        <div id="PanelRecursos" class="col-md-8">
-                            <div class="row">
-                                <div id="metal" class="col-md-3">
-                                    <asp:Label ID="lblmetal" runat="server" Text="Metal"></asp:Label><br />
-                                    <asp:Label ID="lblmetalrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
-                                </div>
-                                <div id="cristal" class="col-md-3">
-                                    <asp:Label ID="lblcristal" runat="server" Text="Cristal"></asp:Label><br />
-                                    <asp:Label ID="lblcristalrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
-                                </div>
-                                <div id="petroleo" class="col-md-3">
-                                    <asp:Label ID="lblPetroleo" runat="server" Text="Petroleo"></asp:Label><br />
-                                    <asp:Label ID="lblPetroleorec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
-                                </div>
-                                <div id="electricidad" class="col-md-3">
-                                    <asp:Label ID="lblElectricidad" runat="server" Text="Electricidad"></asp:Label><br />
-                                    <asp:Label ID="lblElectricidadrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                <div id="header">
+                    <div class="container">
+                        <div class="row">
+                            <!-- LOGO -->
+                            <div id="Logo" class="col-xs-2 right-sep">
+                                <span>logo</span>
+                            </div>
+                            <!-- RECURSOS -->
+                            <div id="PanelRecursos" class="col-xs-8">
+                                <div class="row">
+                                    <div id="metal" class="col-xs-3">
+                                        <asp:Label ID="lblmetal" runat="server" Text="Metal"></asp:Label><br />
+                                        <asp:Label ID="lblmetalrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                    </div>
+                                    <div id="cristal" class="col-xs-3">
+                                        <asp:Label ID="lblcristal" runat="server" Text="Cristal"></asp:Label><br />
+                                        <asp:Label ID="lblcristalrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                    </div>
+                                    <div id="petroleo" class="col-xs-3">
+                                        <asp:Label ID="lblPetroleo" runat="server" Text="Petroleo"></asp:Label><br />
+                                        <asp:Label ID="lblPetroleorec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                    </div>
+                                    <div id="electricidad" class="col-xs-3">
+                                        <asp:Label ID="lblElectricidad" runat="server" Text="Electricidad"></asp:Label><br />
+                                        <asp:Label ID="lblElectricidadrec" CssClass="valrecursos" runat="server" Text="0"></asp:Label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- USER PANEL -->
-                        <div id="PanelUser" class="col-md-2">
-                            <asp:Label ID="lbluser" runat="server" Text="Usuario"></asp:Label>
+                            <!-- USER PANEL -->
+                            <div id="PanelUser" class="col-xs-2 left-sep">
+                                <asp:Label ID="lbluser" runat="server" Text="Usuario"></asp:Label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,17 +75,24 @@
 
                                 <div id="ImgBtns">
                                     <hr />
-                                    <asp:ImageButton ID="btnFriends" runat="server" ImageUrl="~/dist/img/friends_64_white.png" CssClass="imgbtnmenu btn" />
-                                    <asp:ImageButton ID="btnMessages" runat="server" ImageUrl="~/dist/img/message_64_white.png" CssClass="imgbtnmenu btn" />
-                                    <asp:ImageButton ID="btnOptions" runat="server" ImageUrl="~/dist/img/options_64_white.png" CssClass="imgbtnmenu btn" />
-
+                                    <div id="ImgBtnsInner" class="row">
+                                        <div class="col-xs-4">
+                                            <asp:ImageButton ID="btnFriends" runat="server" ImageUrl="~/dist/img/friends_64_white.png" CssClass="imgbtnmenu btn" />
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <asp:ImageButton ID="btnMessages" runat="server" ImageUrl="~/dist/img/message_64_white.png" CssClass="imgbtnmenu btn" />
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <asp:ImageButton ID="btnOptions" runat="server" ImageUrl="~/dist/img/options_64_white.png" CssClass="imgbtnmenu btn" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- CONTENT -->
                         <div id="PanelContenido" class="col-md-8">
-                            <div class="ContenidoCentral">
+                            <div id="Pagina" class="ContenidoCentral">
                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                                 </asp:ContentPlaceHolder>
                             </div>
@@ -90,8 +100,11 @@
 
                         <!-- TERRITORI LIST -->
                         <div id="MenuDerecho" class="col-md-2 ">
-                            Territorios
-                            <div id="ListTerritorios">
+                            <div id="MenuTerritorios">
+                                <h4>Territorios</h4>
+                                <hr />
+                                <div id="ListTerritorios">
+                                </div>
                             </div>
                         </div>
                     </div>
