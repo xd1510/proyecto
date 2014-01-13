@@ -80,6 +80,7 @@ div, footer {
     border: 1px solid white;
 }
 
+
 #header {
     background-color: #20282f;
     border-bottom: 1px solid white;
@@ -133,6 +134,7 @@ html, body {
     text-align: center; 
     color: #FFFFFF; 
     border-top: 1px solid white;
+
 }
    /*Opera Fix*/ 
 body:before { 
@@ -145,4 +147,29 @@ body:before {
 
 #MenuDerecho {
     float: right;
+}
+/*Quita los floats de user control*/
+#Pagina {
+    height:100%;
+    clear: both; 
+}
+
+/*User Controls*/
+.ctrConstruccionDiv {
+width:20%;
+border:1px solid black;
+margin:10px;
+}
+
+.ctrConstruccionImgs {
+width:20%;
+}
+.borderTop {
+    border-top:1px solid black;
+}
+.borderBottom {
+    border-bottom:1px solid black;
+}
+.withauto {
+    width:auto;
 }
