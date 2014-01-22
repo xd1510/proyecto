@@ -173,3 +173,8 @@ width:20%;
 .withauto {
     width:auto;
 }
+/*textBoxes*/
+.txt {
+color:black !important;}
+.txt *{
+color:black !important;}

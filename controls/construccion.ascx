@@ -10,6 +10,7 @@
             margin-bottom:10px;
              margin-right:0px;
              display:block;
+             text-align:left;
             }
 
             .ctrConstruccionImgs {
@@ -21,7 +22,7 @@
             .borderBottom {
                 border-bottom:1px solid black;
             }
-
+    
  </style>
 
 <div class="ctrConstruccionDiv" style="float:left"> 
@@ -45,8 +46,13 @@
         <div>
         <asp:Label ID="lblInstalaciones" runat="server" Text="" CssClass="borderTop"></asp:Label>
         </div>
-        <div>
-        <asp:ImageButton ID="ImageButton1" runat="server" />
-        </div>
+      
+                <div >
+                    <asp:Label ID="lblTiempo" runat="server" Text="Label"></asp:Label>
+                   
+                     <asp:ImageButton ID="imgUpdate" runat="server" Height="34px" ImageUrl="~/dist/img/up.png" Width="33px" />
+                    
+               </div>
+            
 </div>
 
